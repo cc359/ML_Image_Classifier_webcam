@@ -35,9 +35,13 @@ function setup() {
   createCanvas(640, 480);
   background(0);
   video = createCapture(VIDEO)
-  //cat.hide();
+  video.hide();
   mobileNet = ml5.imageClassifier('MobileNet', video, modelReady);
 
 
 } 
+
+function draw {
+  image(video)
+}
 
